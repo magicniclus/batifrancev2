@@ -1,3 +1,31 @@
+import { Metadata } from 'next';
+
+// Métadonnées SEO pour la page contact
+export const metadata: Metadata = {
+  title: "Contact - NEAGU LONUT | Devis Gratuit Rénovation Île-de-France",
+  description: "Contactez NEAGU LONUT pour votre projet de rénovation intérieure, plomberie, salle de bain ou carrelage en Île-de-France. Devis gratuit et personnalisé. Intervention rapide à Suresnes et Hauts-de-Seine.",
+  keywords: "contact NEAGU LONUT, devis gratuit rénovation, contact plombier Île-de-France, devis carrelage Suresnes, contact artisan Hauts-de-Seine, rénovation intérieure contact",
+  authors: [{ name: "NEAGU LONUT" }],
+  creator: "NEAGU LONUT",
+  publisher: "NEAGU LONUT",
+  openGraph: {
+    title: "Contact NEAGU LONUT - Devis Gratuit Rénovation Île-de-France",
+    description: "Contactez notre expert en rénovation pour votre projet. Devis gratuit et personnalisé en Île-de-France.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "NEAGU LONUT - Rénovation Intérieure",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact NEAGU LONUT - Devis Gratuit",
+    description: "Contactez notre expert en rénovation pour votre projet en Île-de-France.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 'use client';
 
 import { useState } from 'react';

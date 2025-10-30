@@ -1,3 +1,19 @@
+import { Metadata } from 'next';
+
+// Métadonnées SEO pour la page merci
+export const metadata: Metadata = {
+  title: "Merci - NEAGU LONUT | Demande Reçue",
+  description: "Merci pour votre demande de devis ! NEAGU LONUT vous recontactera rapidement pour votre projet de rénovation intérieure, plomberie, salle de bain ou carrelage en Île-de-France.",
+  keywords: "merci demande devis, confirmation contact NEAGU LONUT, demande reçue rénovation, suivi projet Île-de-France",
+  authors: [{ name: "NEAGU LONUT" }],
+  creator: "NEAGU LONUT",
+  publisher: "NEAGU LONUT",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 'use client';
 
 import { motion } from 'framer-motion';

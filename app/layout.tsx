@@ -5,32 +5,32 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
-  description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche. Garantie décennale.",
-  keywords: "maçonnerie générale Bretagne, gros second œuvre Ille-et-Vilaine, pose menuiserie Côtes-d'Armor, artisan maçon Manche, construction Bretagne, maçon Rennes, menuiserie Saint-Brieuc, maçonnerie Cherbourg, gros œuvre, cloisons, devis gratuit, Adbetton, travaux maison, garantie décennale, auto-entrepreneur bâtiment",
-  authors: [{ name: "Adbetton" }],
-  creator: "Adbetton",
-  publisher: "Adbetton",
+  title: "NEAGU LONUT - Rénovation Intérieure, Plomberie, Salle de Bain & Carrelage en Île-de-France",
+  description: "NEAGU LONUT, expert en rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France. Devis gratuit et intervention rapide à Suresnes et Hauts-de-Seine. Artisan qualifié et expérimenté.",
+  keywords: "rénovation intérieure Île-de-France, plomberie Suresnes, salle de bain Hauts-de-Seine, carrelage Paris, NEAGU LONUT, devis gratuit, artisan qualifié, travaux rénovation, BTP Île-de-France, plombier Suresnes, carreleur Hauts-de-Seine",
+  authors: [{ name: "NEAGU LONUT" }],
+  creator: "NEAGU LONUT",
+  publisher: "NEAGU LONUT",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://adbetton.fr"),
+  metadataBase: new URL("https://neagu-lonut.fr"),
   alternates: {
-    canonical: "https://adbetton.fr",
+    canonical: "https://neagu-lonut.fr",
   },
   openGraph: {
-    title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
-    description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche.",
-    url: "https://adbetton.fr",
-    siteName: "Adbetton - Maçonnerie Générale",
+    title: "NEAGU LONUT - Expert Rénovation Intérieure en Île-de-France",
+    description: "NEAGU LONUT, spécialiste rénovation intérieure, plomberie, salle de bain et carrelage. Intervention rapide en Île-de-France. Devis gratuit et personnalisé.",
+    url: "https://neagu-lonut.fr",
+    siteName: "NEAGU LONUT - Rénovation Intérieure",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Adbetton - Maçonnerie Générale en Bretagne et Normandie",
+        alt: "NEAGU LONUT - Rénovation Intérieure en Île-de-France",
       },
     ],
     locale: "fr_FR",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie",
-    description: "Auto-entrepreneur en Bretagne et Normandie. Maçonnerie générale, pose de menuiserie. Devis gratuit.",
+    title: "NEAGU LONUT - Expert Rénovation Intérieure",
+    description: "Spécialiste rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France. Devis gratuit.",
     images: ["/og-image.jpg"],
   },
   robots: {

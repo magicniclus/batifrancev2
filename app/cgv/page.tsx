@@ -1,3 +1,26 @@
+import { Metadata } from 'next';
+
+// Métadonnées SEO pour la page CGV
+export const metadata: Metadata = {
+  title: "Conditions Générales de Vente - NEAGU LONUT | CGV Rénovation",
+  description: "Consultez les Conditions Générales de Vente de NEAGU LONUT pour vos travaux de rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France. Garanties et modalités de service.",
+  keywords: "CGV NEAGU LONUT, conditions générales vente rénovation, garantie travaux Île-de-France, modalités service plomberie, CGV artisan BTP",
+  authors: [{ name: "NEAGU LONUT" }],
+  creator: "NEAGU LONUT",
+  publisher: "NEAGU LONUT",
+  openGraph: {
+    title: "CGV NEAGU LONUT - Conditions Générales de Vente",
+    description: "Conditions Générales de Vente pour vos travaux de rénovation en Île-de-France.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "NEAGU LONUT - Rénovation Intérieure",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 'use client';
 
 import { motion } from 'framer-motion';

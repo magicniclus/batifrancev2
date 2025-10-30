@@ -1,3 +1,26 @@
+import { Metadata } from 'next';
+
+// Métadonnées SEO pour la page mentions légales
+export const metadata: Metadata = {
+  title: "Mentions Légales - NEAGU LONUT | Informations Légales",
+  description: "Consultez les mentions légales de NEAGU LONUT, expert en rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France. Informations légales et réglementaires.",
+  keywords: "mentions légales NEAGU LONUT, informations légales rénovation, SIRET artisan Île-de-France, mentions légales BTP, informations entreprise rénovation",
+  authors: [{ name: "NEAGU LONUT" }],
+  creator: "NEAGU LONUT",
+  publisher: "NEAGU LONUT",
+  openGraph: {
+    title: "Mentions Légales NEAGU LONUT",
+    description: "Informations légales et réglementaires de NEAGU LONUT, expert en rénovation en Île-de-France.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "NEAGU LONUT - Rénovation Intérieure",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 'use client';
 
 import { motion } from 'framer-motion';
