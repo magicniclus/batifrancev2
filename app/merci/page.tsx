@@ -1,3 +1,5 @@
+'use client';
+
 import { Metadata } from 'next';
 
 // Métadonnées SEO pour la page merci
@@ -13,8 +15,6 @@ export const metadata: Metadata = {
     follow: false,
   },
 };
-
-'use client';
 
 import { motion } from 'framer-motion';
 import { Check, Home, Phone, Mail } from 'lucide-react';

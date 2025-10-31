@@ -1,3 +1,5 @@
+'use client';
+
 import { Metadata } from 'next';
 
 // Métadonnées SEO pour la page mentions légales
@@ -20,8 +22,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-'use client';
 
 import { motion } from 'framer-motion';
 import { Building, Mail } from 'lucide-react';
