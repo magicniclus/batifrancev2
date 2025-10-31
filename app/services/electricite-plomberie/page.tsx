@@ -19,7 +19,7 @@ const electricitePlomberieConfig = {
   
   // Contenu principal
   serviceName: "Électricité et Plomberie",
-  heroImage: "/plomberie.png",
+  heroImage: "/image-client/plomberie1.png",
   heroTitle: "Électricité et Plomberie à Paris",
   heroSubtitle: "Nos experts en électricité et plomberie assurent des installations fiables et conformes aux normes en vigueur.",
   

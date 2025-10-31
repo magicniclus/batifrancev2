@@ -18,7 +18,7 @@ const renovationGlobaleConfig = {
   
   // Contenu principal
   serviceName: "Rénovation Globale",
-  heroImage: "/maison-work.png",
+  heroImage: "/image-client/renovation.png",
   heroTitle: "Rénovation Globale à Paris",
   heroSubtitle: "Transformations et nettoyage complets pour donner une nouvelle vie à vos espaces de vie et de travail.",
   

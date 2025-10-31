@@ -23,7 +23,7 @@
         "title": "Bati France - Votre partenaire rénovation",
         "subtitle": "Nous sommes spécialisés dans tous les corps d'état",
         "content": "Nous sommes spécialisés dans tous les corps d'état, garantissant qualité et respect des délais pour vos projets de construction et rénovation. Avec plus de 5 ans d'expérience, notre équipe réalise des chantiers variés, du sinistre à la transformation complète d'appartements.",
-        "image": "/maison-work.png",
+        "image": "/image-client/about1.avif",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
         "buttonText": "Voir nos réalisations",
@@ -35,7 +35,7 @@
         "title": "Notre Localisation",
         "subtitle": "17 avenue Gambetta, Paris 75020",
         "content": "Bati France est situé au 17 avenue Gambetta, Paris 75020, offrant des services de rénovation de qualité dans toute la région. Nous sommes spécialisés dans tous les métiers pour vos projets. Horaires : Lundi à Samedi.",
-        "image": "/plomberie.png",
+        "image": "/image-client/about2.avif",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
         "buttonText": "Nous contacter",
@@ -50,34 +50,96 @@
     "initialDisplayCount": 4,
     "images": [
       {
-        "src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=800&fit=crop",
-        "alt": "Cloisons sèches",
-        "title": "Pose cloisons sèches - Marseille (13)"
+        "src": "/image-client/chantier/1.jpeg",
+        "alt": "Réalisation Bati France"
       },
       {
-        "src": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=800&fit=crop",
-        "alt": "Doublage placo",
-        "title": "Doublage isolation - PACA"
+        "src": "/image-client/chantier/2.jpeg",
+        "alt": "Réalisation Bati France"
       },
       {
-        "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Faux plafond",
-        "title": "Faux plafond suspendu - Bouches-du-Rhône (13)"
+        "src": "/image-client/chantier/3.jpeg",
+        "alt": "Réalisation Bati France"
       },
       {
-        "src": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=800&fit=crop",
-        "alt": "Plâtrerie moderne",
-        "title": "Travaux plâtrerie - Provence-Alpes-Côte d'Azur"
+        "src": "/image-client/chantier/4.jpeg",
+        "alt": "Réalisation Bati France"
       },
       {
-        "src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=800&fit=crop",
-        "alt": "Finitions placo",
-        "title": "Finitions plâtrerie - Marseille"
+        "src": "/image-client/chantier/5.jpeg",
+        "alt": "Réalisation Bati France"
       },
       {
-        "src": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=800&fit=crop",
-        "alt": "Aménagement intérieur",
-        "title": "Aménagement cloisons - PACA"
+        "src": "/image-client/chantier/6.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/7.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/8.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/9.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/10.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/11.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/12.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/13.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/14.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/15.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/16.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/17.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/18.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/19.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/20.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/21.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/22.jpeg",
+        "alt": "Réalisation Bati France"
+      },
+      {
+        "src": "/image-client/chantier/23.jpeg",
+        "alt": "Réalisation Bati France"
       }
     ]
   },
@@ -91,7 +153,7 @@
         "name": "Équipe Bati France",
         "position": "Spécialistes en Rénovation",
         "description": "Avec plus de 5 ans d'expérience, notre équipe réalise des chantiers variés, du sinistre à la transformation complète d'appartements. Nous sommes spécialisés dans tous les corps d'état, garantissant qualité et respect des délais pour vos projets de construction et rénovation. Avec plus de 5 ans d'expérience, notre équipe réalise des chantiers variés.",
-        "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+        "photo": "/image-client/client.jpg"
       }
     ]
   },

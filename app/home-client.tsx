@@ -25,7 +25,7 @@ export default function HomeClient() {
       title: "Peinture et Ravalement",
       subtitle: "Intérieur & Extérieur",
       content: "Spécialisés en peinture générale et ravalement, nous transformons vos espaces avec soin.",
-      image: "/placo.png",
+      image: "/image-client/peinture.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b",
       href: "/services/peinture-ravalement"
@@ -34,7 +34,7 @@ export default function HomeClient() {
       title: "Électricité et Plomberie",
       subtitle: "Installation & Rénovation",
       content: "Nos experts en électricité et plomberie assurent des installations fiables et conformes aux normes.",
-      image: "/plomberie.png",
+      image: "/image-client/plomberie1.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2",
       href: "/services/electricite-plomberie"
@@ -43,7 +43,7 @@ export default function HomeClient() {
       title: "Rénovation globale",
       subtitle: "Transformations et Nettoyage",
       content: "Transformations complètes et nettoyage professionnel pour donner une nouvelle vie à vos espaces.",
-      image: "/maison-work.png",
+      image: "/image-client/renovation.png",
       gradientFrom: "#28a745",
       gradientTo: "#20c997",
       href: "/services/renovation-globale"

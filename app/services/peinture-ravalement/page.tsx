@@ -18,7 +18,7 @@ const peintureRavalementConfig = {
   
   // Contenu principal
   serviceName: "Peinture et Ravalement",
-  heroImage: "/placo.png",
+  heroImage: "/image-client/peinture.png",
   heroTitle: "Peinture et Ravalement à Paris",
   heroSubtitle: "Spécialisés en peinture générale et ravalement, nous transformons vos espaces avec soin et professionnalisme.",
   

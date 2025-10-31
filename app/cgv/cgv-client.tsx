@@ -52,10 +52,10 @@ export default function CGVClient() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre 
-                  {config.company.legalName}, société par actions simplifiée au capital de 50 000 €, immatriculée au RCS de Paris 
-                  sous le numéro B {config.company.siret}, dont le siège social est situé {config.company.address}, 
-                  ci-après dénommée « {config.company.name} » ou « la Société », et toute personne physique ou morale, 
-                  ci-après dénommée « le Client », souhaitant bénéficier des services proposés par TrouverMonChantier.
+                  BATI FRANCE, société par actions simplifiée, immatriculée au RCS de Paris 
+                  sous le numéro SIRET 82426324600013, dont le siège social est situé 17 avenue Gambetta, 75020 Paris, 
+                  ci-après dénommée « BATI FRANCE » ou « la Société », et toute personne physique ou morale, 
+                  ci-après dénommée « le Client », souhaitant bénéficier des services de rénovation proposés.
                 </p>
                 <p>
                   L'acceptation des présentes CGV est matérialisée par la validation de toute commande ou demande de service. 
@@ -69,15 +69,17 @@ export default function CGVClient() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Article 1 - Objet</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  {config.company.name} est une plateforme de mise en relation entre particuliers et professionnels du bâtiment. 
+                  BATI FRANCE est une entreprise spécialisée dans les travaux de rénovation intérieure et extérieure. 
                   La Société propose les services suivants :
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Mise en relation avec des artisans et entrepreneurs qualifiés</li>
-                  <li>Établissement de devis gratuits</li>
-                  <li>Suivi de projets de construction et rénovation</li>
-                  <li>Conseil et accompagnement personnalisé</li>
-                  <li>Garanties sur les travaux réalisés</li>
+                  <li>Peinture intérieure et extérieure</li>
+                  <li>Ravalement de façades</li>
+                  <li>Travaux d'électricité et de plomberie</li>
+                  <li>Rénovation globale et transformation d'espaces</li>
+                  <li>Nettoyage post-travaux</li>
+                  <li>Établissement de devis gratuits et personnalisés</li>
+                  <li>Garanties décennale et responsabilité civile</li>
                 </ul>
               </div>
             </div>
@@ -92,7 +94,7 @@ export default function CGVClient() {
                 </p>
                 <p>
                   Le devis est valable 30 jours à compter de sa date d'émission. Passé ce délai, 
-                  {config.company.name} se réserve le droit de modifier les prix proposés.
+                  BATI FRANCE se réserve le droit de modifier les prix proposés.
                 </p>
                 <p>
                   L'acceptation du devis par le Client, matérialisée par sa signature et le versement de l'acompte éventuel, 

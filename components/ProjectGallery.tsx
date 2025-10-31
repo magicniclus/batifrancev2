@@ -41,9 +41,11 @@ export default function ProjectGallery({
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const displayedImages = galleryImages.slice(0, displayCount);
   const hasMoreImages = displayCount < galleryImages.length;
+  const showingAll = displayCount >= galleryImages.length;
 
   const openLightbox = (index: number) => {
     setSelectedImageIndex(index);
@@ -63,7 +65,13 @@ export default function ProjectGallery({
   };
 
   const showMoreImages = () => {
-    setDisplayCount(images.length);
+    setDisplayCount(galleryImages.length);
+    setIsExpanded(true);
+  };
+
+  const showLessImages = () => {
+    setDisplayCount(galleryInitialDisplayCount);
+    setIsExpanded(false);
   };
 
   useEffect(() => {
@@ -101,51 +109,73 @@ export default function ProjectGallery({
 
           {/* Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {displayedImages.map((image, index) => (
-              <motion.div
-                key={index}
-                className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                onClick={() => openLightbox(index)}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                {image.title && (
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <p className="text-white font-medium">{image.title}</p>
-                  </div>
-                )}
-              </motion.div>
-            ))}
+            <AnimatePresence mode="popLayout">
+              {displayedImages.map((image, index) => (
+                <motion.div
+                  key={`${image.src}-${index}`}
+                  className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ 
+                    duration: 0.4, 
+                    delay: index >= galleryInitialDisplayCount ? (index - galleryInitialDisplayCount) * 0.1 : 0,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  whileHover={{ y: -5 }}
+                  onClick={() => openLightbox(index)}
+                  layout
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
 
-          {/* Show More Button */}
-          {hasMoreImages && (
-            <motion.div
-              className="text-center mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={showMoreImages}
+          {/* Buttons */}
+          <div className="text-center mt-12 space-y-4">
+            {hasMoreImages && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
-                Voir plus de réalisations ({images.length - displayCount} restantes)
-              </Button>
-            </motion.div>
-          )}
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={showMoreImages}
+                >
+                  Voir plus de réalisations ({galleryImages.length - displayCount} restantes)
+                </Button>
+              </motion.div>
+            )}
+            
+            {showingAll && isExpanded && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-50 shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={showLessImages}
+                >
+                  Voir moins de photos
+                </Button>
+              </motion.div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -230,14 +260,6 @@ export default function ProjectGallery({
                 </button>
               </Carousel>
 
-              {/* Image Info */}
-              {galleryImages[current - 1]?.title && (
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 text-center">
-                  <p className="text-white text-lg font-medium bg-black/70 px-6 py-3 rounded-lg">
-                    {galleryImages[current - 1].title}
-                  </p>
-                </div>
-              )}
             </motion.div>
           </motion.div>
         )}
