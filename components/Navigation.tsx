@@ -19,28 +19,27 @@ export default function Navigation() {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const pathname = usePathname();
-  const phoneNumber = "06 59 76 49 95";
+  const phoneNumber = "+33 6 59 69 94 15";
 
   // Détecter si on est sur la page d'accueil
   const isHomePage = pathname === '/';
 
   // Liste des services pour le dropdown
   const servicesLinks = [
-    { name: 'Cloisons Sèches', href: '/services/cloisons-seches' },
-    { name: 'Doublages', href: '/services/doublages' },
-    { name: 'Faux Plafonds', href: '/services/faux-plafonds' },
-    { name: 'Finitions Plâtrerie', href: '/services/finitions-platrerie' },
+    { name: 'Peinture et Ravalement', href: '/services/peinture-ravalement' },
+    { name: 'Électricité et Plomberie', href: '/services/electricite-plomberie' },
+    { name: 'Rénovation globale', href: '/services/renovation-globale' },
   ];
 
   // Navigation adaptative selon la page
   const navigationLinks = isHomePage ? [
-    { name: 'Mon expertise', href: '#expertise' },
+    { name: 'Notre expertise', href: '#expertise' },
     { name: 'Services', href: '#services', hasDropdown: true },
-    { name: 'Mes réalisations', href: '#realisations' },
+    { name: 'Nos réalisations', href: '#realisations' },
   ] : [
-    { name: 'Mon expertise', href: '/#expertise' },
+    { name: 'Notre expertise', href: '/#expertise' },
     { name: 'Services', href: '/#services', hasDropdown: true },
-    { name: 'Mes réalisations', href: '/#realisations' },
+    { name: 'Nos réalisations', href: '/#realisations' },
   ];
 
   // Prevent body scroll when mobile menu is open
@@ -100,8 +99,8 @@ export default function Navigation() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">MARQUES VAZ PLACO</span>
-                <span className="text-xs text-gray-600 font-medium">plaquiste professionnel</span>
+                <span className="text-xl font-bold text-gray-900">BATI FRANCE</span>
+                <span className="text-xs text-gray-600 font-medium">spécialistes BTP</span>
               </div>
             </Link>
           </motion.div>
@@ -284,10 +283,10 @@ export default function Navigation() {
                 </motion.div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-foreground">
-                    MARQUES VAZ PLACO
+                    BATI FRANCE
                   </span>
                   <span className="text-xs text-gray-400 font-medium">
-                    plaquiste professionnel
+                    spécialistes BTP
                   </span>
                 </div>
               </div>

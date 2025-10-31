@@ -22,48 +22,39 @@ export default function HomeClient() {
   
   const servicesData = [
     {
-      title: "Cloisons Sèches",
-      subtitle: "Aménagement et séparation d'espaces",
-      content: "Pose de cloisons sèches en plaques de plâtre pour créer, séparer ou réorganiser vos espaces intérieurs. Solutions sur mesure avec isolation phonique et thermique.",
+      title: "Peinture et Ravalement",
+      subtitle: "Intérieur & Extérieur",
+      content: "Spécialisés en peinture générale et ravalement, nous transformons vos espaces avec soin.",
       image: "/placo.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b",
-      href: "/services/cloisons-seches"
+      href: "/services/peinture-ravalement"
     },
     {
-      title: "Doublages",
-      subtitle: "Isolation et finition murale",
-      content: "Doublage des murs pour améliorer l'isolation thermique et phonique. Pose de plaques de plâtre sur ossature métallique ou collage direct selon vos besoins.",
+      title: "Électricité et Plomberie",
+      subtitle: "Installation & Rénovation",
+      content: "Nos experts en électricité et plomberie assurent des installations fiables et conformes aux normes.",
       image: "/plomberie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2",
-      href: "/services/doublages"
+      href: "/services/electricite-plomberie"
     },
     {
-      title: "Faux Plafonds",
-      subtitle: "Plafonds suspendus modernes",
-      content: "Installation de faux plafonds suspendus en plaques de plâtre. Intégration d'éclairage, amélioration de l'isolation et création de volumes sur mesure.",
+      title: "Rénovation globale",
+      subtitle: "Transformations et Nettoyage",
+      content: "Transformations complètes et nettoyage professionnel pour donner une nouvelle vie à vos espaces.",
       image: "/maison-work.png",
       gradientFrom: "#28a745",
       gradientTo: "#20c997",
-      href: "/services/faux-plafonds"
-    },
-    {
-      title: "Finitions Plâtrerie",
-      subtitle: "Finitions et enduits",
-      content: "Réalisation de finitions parfaites : enduits, lissage, ponçage. Préparation des surfaces pour peinture ou revêtements avec un rendu professionnel.",
-      image: "/mur.png",
-      gradientFrom: "#fd7e14",
-      gradientTo: "#ffc107",
-      href: "/services/finitions-platrerie"
+      href: "/services/renovation-globale"
     }
   ];
 
   const contactInfo = {
-    address: "Provence-Alpes-Côte d'Azur\nMarseille et environs\nRayon d'intervention : 80 km",
-    phone: "06 59 76 49 95",
-    email: "amiltonvazmarques@gmail.com",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Marseille,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
+    address: "17 avenue Gambetta, Paris 75020",
+    phone: "+33 6 59 69 94 15",
+    email: "batifrance@outlook.fr",
+    mapEmbedUrl: "https://maps.google.com/maps?q=17+avenue+Gambetta,+Paris+75020&t=&z=15&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -114,7 +105,7 @@ export default function HomeClient() {
       <TeamSection config={config.team} />
       <ContactSection 
         title="Contactez-nous"
-        subtitle="Parlons de votre projet de plâtrerie, cloisons sèches, doublages ou faux plafonds en Provence-Alpes-Côte d'Azur"
+        subtitle="Venez nous rencontrer dans nos bureaux"
         contactInfo={contactInfo} 
       />
 

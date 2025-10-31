@@ -14,32 +14,30 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Neagu Ionut - Rénovation Intérieure & Plomberie en Île-de-France",
-  description: "Neagu Ionut, auto-entrepreneur spécialisé en rénovation intérieure, plomberie, salle de bain et carrelage. Devis gratuit en Île-de-France, Hauts-de-Seine.",
+  title: "Bati France - Spécialistes BTP & Rénovation à Paris",
+  description: "Bati France, spécialistes dans tous les corps d'état : peinture, ravalement, électricité, plomberie, rénovation globale. Devis gratuit à Paris 75020.",
   keywords: [
-    "rénovation intérieure Île-de-France",
-    "plomberie Hauts-de-Seine",
-    "salle de bain Suresnes",
-    "carrelage 92150",
-    "artisan rénovation Paris",
-    "plombier Suresnes",
-    "rénovation appartement",
-    "travaux salle de bain",
-    "pose carrelage",
-    "installation plomberie",
+    "BTP Paris",
+    "peinture ravalement Paris",
+    "électricité plomberie Paris",
+    "rénovation globale Paris",
+    "entrepreneur bâtiment Paris",
+    "travaux rénovation 75020",
+    "Bati France",
+    "construction Paris",
+    "artisan BTP",
     "devis gratuit",
-    "Neagu Ionut",
-    "travaux maison",
-    "rénovation BTP",
-    "auto-entrepreneur bâtiment"
+    "spécialistes BTP",
+    "tous corps d'état",
+    "entrepreneur du bâtiment"
   ],
-  author: "Neagu Ionut",
-  siteUrl: "https://neagu-ionut.fr",
-  siteName: "Neagu Ionut - Rénovation Intérieure",
+  author: "Bati France",
+  siteUrl: "https://batifrance.fr",
+  siteName: "Bati France - Spécialistes BTP",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
-  twitterHandle: "@adbetton"
+  twitterHandle: "@batifrance"
 };
 
 export function generateMetadata(
@@ -116,28 +114,29 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "Neagu Ionut",
-  "legalName": "Neagu Ionut - Entreprise de rénovation",
+  "name": "Bati France",
+  "legalName": "Bati France - Spécialistes BTP",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
-    "@type": "Person",
-    "name": "Neagu Ionut"
+    "@type": "Organization",
+    "name": "Équipe Bati France"
   },
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Suresnes",
-    "postalCode": "92150",
+    "streetAddress": "17 avenue Gambetta",
+    "addressLocality": "Paris",
+    "postalCode": "75020",
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+33758850226",
+    "telephone": "+33659699415",
     "contactType": "customer service",
-    "email": "idarenovation2022@gmail.com",
+    "email": "batifrance@outlook.fr",
     "availableLanguage": "French"
   },
   "areaServed": [
@@ -147,22 +146,22 @@ export const organizationSchema = {
     },
     {
       "@type": "AdministrativeArea", 
-      "name": "Hauts-de-Seine"
+      "name": "Paris"
     },
     {
       "@type": "City",
-      "name": "Suresnes"
+      "name": "Paris 20e"
     }
   ],
   "serviceType": [
-    "Rénovation intérieure",
-    "Plomberie", 
-    "Salle de bain",
-    "Carrelage",
+    "Peinture et Ravalement",
+    "Électricité et Plomberie", 
+    "Rénovation globale",
+    "Construction",
     "Travaux BTP"
   ],
   "priceRange": "€€",
-  "openingHours": "Mo-Fr 08:00-18:00",
+  "openingHours": "Mo-Sa 08:00-18:00",
   "sameAs": [
     `${seoConfig.siteUrl}`,
   ]
@@ -179,22 +178,30 @@ export const servicesSchema = {
   "areaServed": organizationSchema.areaServed,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Services de construction",
+    "name": "Services BTP",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Rénovation intérieure",
-          "description": "Rénovation complète d'appartements et maisons, cloisons, sols, peinture"
+          "name": "Peinture et Ravalement",
+          "description": "Spécialisés en peinture générale et ravalement, intérieur et extérieur"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service", 
-          "name": "Plomberie et salle de bain",
-          "description": "Installation plomberie, création salle de bain, pose carrelage"
+          "name": "Électricité et Plomberie",
+          "description": "Installation et rénovation électricité et plomberie, conformes aux normes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Rénovation globale",
+          "description": "Transformations et nettoyage, rénovation complète de vos espaces"
         }
       }
     ]

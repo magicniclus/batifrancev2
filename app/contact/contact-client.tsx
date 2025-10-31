@@ -45,11 +45,11 @@ export default function ContactClient() {
   };
 
   const contactInfo = {
-    address: "Zone d'intervention :\nProvence-Alpes-Côte d'Azur\nMarseille et environs\nRayon : 80 km",
-    phone: "06 59 76 49 95",
-    email: "amiltonvazmarques@gmail.com",
-    hours: "Lundi - Vendredi: 8h00 - 18h00\nSamedi: 8h00 - 12h00",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Marseille,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
+    address: "17 avenue Gambetta\nParis 75020",
+    phone: "+33 6 59 69 94 15",
+    email: "batifrance@outlook.fr",
+    hours: "Lundi - Samedi: 8h00 - 18h00",
+    mapEmbedUrl: "https://maps.google.com/maps?q=17+avenue+Gambetta,+Paris+75020&t=&z=15&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -70,7 +70,7 @@ export default function ContactClient() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Un projet de plâtrerie, cloisons sèches, doublages ou faux plafonds ? Notre équipe est là pour vous accompagner en Provence-Alpes-Côte d'Azur.
+              Un projet de BTP ? Notre équipe Bati France est là pour vous accompagner dans tous vos projets de construction et rénovation.
             </p>
           </motion.div>
         </div>

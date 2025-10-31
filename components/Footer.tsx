@@ -20,10 +20,9 @@ export default function Footer() {
   ];
 
   const servicesLinks = [
-    { name: 'Cloisons Sèches', href: '/services/cloisons-seches' },
-    { name: 'Doublages', href: '/services/doublages' },
-    { name: 'Faux Plafonds', href: '/services/faux-plafonds' },
-    { name: 'Finitions Plâtrerie', href: '/services/finitions-platrerie' },
+    { name: 'Peinture et Ravalement', href: '/services/peinture-ravalement' },
+    { name: 'Électricité et Plomberie', href: '/services/electricite-plomberie' },
+    { name: 'Rénovation globale', href: '/services/renovation-globale' },
   ];
 
   return (
@@ -55,17 +54,17 @@ export default function Footer() {
                   />
                 </motion.div>
                 <span className="text-xl font-bold">
-                  MARQUES VAZ PLACO
+                  BATI FRANCE
                 </span>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Spécialiste plaquiste en Provence-Alpes-Côte d'Azur. Cloisons sèches, doublages et faux plafonds depuis 2015.
+                Spécialistes dans tous les corps d'état, nous garantissons qualité et respect des délais pour vos projets de construction et rénovation.
               </p>
               <a 
-                href="tel:0659764995" 
+                href="tel:+33659699415" 
                 className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
               >
-                06 59 76 49 95
+                +33 6 59 69 94 15
               </a>
             </motion.div>
 
@@ -127,14 +126,14 @@ export default function Footer() {
               <h3 className="text-lg font-semibold">Contact</h3>
               <div className="space-y-2">
                 <a 
-                  href="tel:0659764995"
+                  href="tel:+33659699415"
                   className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block flex items-center space-x-2"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>06 59 76 49 95</span>
+                  <span>+33 6 59 69 94 15</span>
                 </a>
                 <p className="text-slate-400 text-xs">
-                  Service gratuit 7j/7 de 9h à 19h
+                  Disponible du Lundi à Samedi - 8h à 18h
                 </p>
               </div>
             </motion.div>
@@ -152,7 +151,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              © {currentYear} MARQUES VAZ PLACO. Tous droits réservés.
+              © {currentYear} Bati France. Tous droits réservés.
             </motion.p>
 
             {/* Powered by */}
