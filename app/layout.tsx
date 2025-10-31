@@ -5,32 +5,32 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "NEAGU LONUT - Rénovation Intérieure, Plomberie, Salle de Bain & Carrelage en Île-de-France",
-  description: "NEAGU LONUT, expert en rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France. Devis gratuit et intervention rapide à Suresnes et Hauts-de-Seine. Artisan qualifié et expérimenté.",
-  keywords: "rénovation intérieure Île-de-France, plomberie Suresnes, salle de bain Hauts-de-Seine, carrelage Paris, NEAGU LONUT, devis gratuit, artisan qualifié, travaux rénovation, BTP Île-de-France, plombier Suresnes, carreleur Hauts-de-Seine",
-  authors: [{ name: "NEAGU LONUT" }],
-  creator: "NEAGU LONUT",
-  publisher: "NEAGU LONUT",
+  title: "MARQUES VAZ PLACO - Plaquiste Professionnel en Provence-Alpes-Côte d'Azur",
+  description: "MARQUES VAZ PLACO, expert plaquiste en Provence-Alpes-Côte d'Azur. Spécialisé en cloisons sèches, doublages et faux plafonds depuis 2015. Devis gratuit et intervention rapide à Marseille et environs.",
+  keywords: "plaquiste Marseille, cloisons sèches PACA, doublage isolation Provence, faux plafond Bouches-du-Rhône, MARQUES VAZ PLACO, plâtrerie Marseille, devis gratuit, artisan qualifié, travaux placo, BTP PACA",
+  authors: [{ name: "AMILTON VAZ" }],
+  creator: "MARQUES VAZ PLACO",
+  publisher: "MARQUES VAZ PLACO",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://neagu-lonut.fr"),
+  metadataBase: new URL("https://marquesvazplaco.fr"),
   alternates: {
-    canonical: "https://neagu-lonut.fr",
+    canonical: "https://marquesvazplaco.fr",
   },
   openGraph: {
-    title: "NEAGU LONUT - Expert Rénovation Intérieure en Île-de-France",
-    description: "NEAGU LONUT, spécialiste rénovation intérieure, plomberie, salle de bain et carrelage. Intervention rapide en Île-de-France. Devis gratuit et personnalisé.",
-    url: "https://neagu-lonut.fr",
-    siteName: "NEAGU LONUT - Rénovation Intérieure",
+    title: "MARQUES VAZ PLACO - Expert Plaquiste en Provence-Alpes-Côte d'Azur",
+    description: "MARQUES VAZ PLACO, spécialiste plaquiste, cloisons sèches, doublages et faux plafonds. Intervention rapide en PACA. Devis gratuit et personnalisé.",
+    url: "https://marquesvazplaco.fr",
+    siteName: "MARQUES VAZ PLACO - Plaquiste Professionnel",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "NEAGU LONUT - Rénovation Intérieure en Île-de-France",
+        alt: "MARQUES VAZ PLACO - Plaquiste en Provence-Alpes-Côte d'Azur",
       },
     ],
     locale: "fr_FR",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEAGU LONUT - Expert Rénovation Intérieure",
-    description: "Spécialiste rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France. Devis gratuit.",
+    title: "MARQUES VAZ PLACO - Expert Plaquiste",
+    description: "Spécialiste plaquiste, cloisons sèches, doublages et faux plafonds en Provence-Alpes-Côte d'Azur. Devis gratuit.",
     images: ["/og-image.jpg"],
   },
   robots: {

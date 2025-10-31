@@ -1,16 +1,16 @@
 {
   "company": {
-    "name": "Neagu Ionut",
-    "legalName": "Neagu Ionut - Entreprise de rénovation",
-    "address": "92150 Suresnes, Île-de-France",
-    "phone": "07 58 85 02 26",
-    "email": "idarenovation2022@gmail.com",
+    "name": "MARQUES VAZ PLACO",
+    "legalName": "Marques vaz placo - Entreprise de plaquiste",
+    "address": "Provence-Alpes-Côte d'Azur, Marseille",
+    "phone": "06 59 76 49 95",
+    "email": "amiltonvazmarques@gmail.com",
     "siret": "Auto-entrepreneur",
-    "ceo": "NEAGU IONUT"
+    "ceo": "AMILTON VAZ"
   },
   "hero": {
-    "title": "Neagu Ionut - Spécialiste rénovation intérieure en Île-de-France",
-    "subtitle": "Expert en rénovation intérieure, plomberie, salle de bain et carrelage. Votre partenaire de confiance pour tous vos projets de rénovation dans le secteur du BTP en Île-de-France.",
+    "title": "MARQUES VAZ PLACO - Spécialiste plaquiste en Provence-Alpes-Côte d'Azur",
+    "subtitle": "Expert en plâtrerie et cloisons sèches depuis 2015. Votre spécialiste plaquiste de confiance pour tous vos projets de construction et rénovation dans la région de Marseille et ses environs.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
     "backgroundImage": "",
@@ -20,9 +20,9 @@
     "sections": [
       {
         "smallTitle": "Notre expertise",
-        "title": "Spécialiste de la rénovation intérieure",
-        "subtitle": "Plus de 3 ans d'expérience dans le secteur du BTP",
-        "content": "Notre entreprise, Neagu Ionut, est spécialisée dans la rénovation intérieure depuis 2022. Nous mettons notre expertise au service de vos projets de rénovation, qu'il s'agisse de plomberie, de salles de bain ou de carrelage. Notre mission : apporter un travail soigné, durable et de qualité, dans le respect des délais et des normes en Île-de-France.",
+        "title": "Spécialiste plaquiste professionnel",
+        "subtitle": "Plus de 10 ans d'expérience dans le secteur du BTP",
+        "content": "Notre entreprise, MARQUES VAZ PLACO, est spécialisée dans les travaux de plâtrerie depuis 2015. Nous mettons notre expertise au service de vos projets de construction et rénovation, qu'il s'agisse de cloisons sèches, doublages, faux plafonds ou finitions. Notre mission : apporter un travail soigné, durable et de qualité, dans le respect des délais et des normes en Provence-Alpes-Côte d'Azur.",
         "image": "/maison-work.png",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
@@ -32,9 +32,9 @@
       },
       {
         "smallTitle": "Nos spécialités",
-        "title": "Rénovation complète et plomberie",
-        "subtitle": "Expert en salle de bain et carrelage",
-        "content": "Ce qui nous distingue, c'est notre expertise technique, notre rigueur et notre relation de confiance avec nos clients. Chaque chantier est pour nous une nouvelle occasion de prouver que la rénovation intérieure peut allier qualité et modernité. Nous maîtrisons parfaitement les normes de sécurité et de construction en vigueur.",
+        "title": "Plâtrerie et cloisons sèches",
+        "subtitle": "Expert en doublages et faux plafonds",
+        "content": "Ce qui nous distingue, c'est notre expertise technique en plâtrerie, notre rigueur et notre relation de confiance avec nos clients. Chaque chantier est pour nous une nouvelle occasion de prouver que les travaux de placo peuvent allier qualité et modernité. Nous maîtrisons parfaitement les normes de sécurité et de construction en vigueur dans le secteur de la plâtrerie.",
         "image": "/plomberie.png",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
@@ -46,38 +46,38 @@
   },
   "gallery": {
     "title": "Nos Réalisations",
-    "subtitle": "Découvrez nos projets de rénovation intérieure, plomberie et carrelage en Île-de-France",
+    "subtitle": "Découvrez nos projets de plâtrerie, cloisons sèches et doublages en Provence-Alpes-Côte d'Azur",
     "initialDisplayCount": 4,
     "images": [
       {
         "src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=800&fit=crop",
-        "alt": "Rénovation salle de bain",
-        "title": "Rénovation salle de bain - Suresnes (92)"
+        "alt": "Cloisons sèches",
+        "title": "Pose cloisons sèches - Marseille (13)"
       },
       {
         "src": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=800&fit=crop",
-        "alt": "Plomberie moderne",
-        "title": "Installation plomberie - Île-de-France"
+        "alt": "Doublage placo",
+        "title": "Doublage isolation - PACA"
       },
       {
         "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
-        "alt": "Carrelage moderne",
-        "title": "Pose carrelage - Hauts-de-Seine (92)"
+        "alt": "Faux plafond",
+        "title": "Faux plafond suspendu - Bouches-du-Rhône (13)"
       },
       {
         "src": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=800&fit=crop",
-        "alt": "Rénovation intérieure",
-        "title": "Rénovation complète - Île-de-France"
+        "alt": "Plâtrerie moderne",
+        "title": "Travaux plâtrerie - Provence-Alpes-Côte d'Azur"
       },
       {
         "src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=800&fit=crop",
-        "alt": "Salle de bain moderne",
-        "title": "Aménagement salle de bain - 92150"
+        "alt": "Finitions placo",
+        "title": "Finitions plâtrerie - Marseille"
       },
       {
         "src": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=800&fit=crop",
-        "alt": "Installation sanitaire",
-        "title": "Plomberie sanitaire - Suresnes"
+        "alt": "Aménagement intérieur",
+        "title": "Aménagement cloisons - PACA"
       }
     ]
   },
@@ -88,9 +88,9 @@
   "team": {
     "members": [
       {
-        "name": "Neagu Ionut",
-        "position": "Fondateur & Expert en Rénovation",
-        "description": "Passionné par le secteur du BTP, j'ai créé mon entreprise de rénovation intérieure en 2022. Spécialisé en plomberie, salle de bain et carrelage, je mets mon expertise technique au service de vos projets en Île-de-France. Mon engagement : vous offrir un service de qualité, dans le respect des délais et avec un souci constant du détail.",
+        "name": "Amilton Vaz",
+        "position": "Fondateur & Expert Plaquiste",
+        "description": "Passionné par le secteur du BTP, j'ai créé mon entreprise de plâtrerie en 2015. Spécialisé en cloisons sèches, doublages et faux plafonds, je mets mon expertise technique au service de vos projets en Provence-Alpes-Côte d'Azur. Mon engagement : vous offrir un service de qualité, dans le respect des délais et avec un souci constant du détail.",
         "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
       }
     ]

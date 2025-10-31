@@ -19,17 +19,17 @@ export default function Navigation() {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const pathname = usePathname();
-  const phoneNumber = "07 58 85 02 26";
+  const phoneNumber = "06 59 76 49 95";
 
   // Détecter si on est sur la page d'accueil
   const isHomePage = pathname === '/';
 
   // Liste des services pour le dropdown
   const servicesLinks = [
-    { name: 'Rénovation Intérieure', href: '/services/renovation-interieure' },
-    { name: 'Plomberie', href: '/services/plomberie' },
-    { name: 'Salle de Bain', href: '/services/salle-de-bain' },
-    { name: 'Carrelage', href: '/services/carrelage' },
+    { name: 'Cloisons Sèches', href: '/services/cloisons-seches' },
+    { name: 'Doublages', href: '/services/doublages' },
+    { name: 'Faux Plafonds', href: '/services/faux-plafonds' },
+    { name: 'Finitions Plâtrerie', href: '/services/finitions-platrerie' },
   ];
 
   // Navigation adaptative selon la page
@@ -100,8 +100,8 @@ export default function Navigation() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">NEAGU LONUT</span>
-                <span className="text-xs text-gray-600 font-medium">rénovation - plomberie</span>
+                <span className="text-xl font-bold text-gray-900">MARQUES VAZ PLACO</span>
+                <span className="text-xs text-gray-600 font-medium">plaquiste professionnel</span>
               </div>
             </Link>
           </motion.div>
@@ -284,10 +284,10 @@ export default function Navigation() {
                 </motion.div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-foreground">
-                    Neagu Ionut
+                    MARQUES VAZ PLACO
                   </span>
                   <span className="text-xs text-gray-400 font-medium">
-                    rénovation - plomberie
+                    plaquiste professionnel
                   </span>
                 </div>
               </div>

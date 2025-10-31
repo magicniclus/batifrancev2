@@ -3,9 +3,14 @@
 import { motion } from 'framer-motion';
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(2025);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   const legalLinks = [
     { name: 'Mentions légales', href: '/mentions-legales' },
@@ -15,10 +20,10 @@ export default function Footer() {
   ];
 
   const servicesLinks = [
-    { name: 'Rénovation Intérieure', href: '/services/renovation-interieure' },
-    { name: 'Plomberie', href: '/services/plomberie' },
-    { name: 'Salle de Bain', href: '/services/salle-de-bain' },
-    { name: 'Carrelage', href: '/services/carrelage' },
+    { name: 'Cloisons Sèches', href: '/services/cloisons-seches' },
+    { name: 'Doublages', href: '/services/doublages' },
+    { name: 'Faux Plafonds', href: '/services/faux-plafonds' },
+    { name: 'Finitions Plâtrerie', href: '/services/finitions-platrerie' },
   ];
 
   return (
@@ -50,17 +55,17 @@ export default function Footer() {
                   />
                 </motion.div>
                 <span className="text-xl font-bold">
-                  Neagu Ionut
+                  MARQUES VAZ PLACO
                 </span>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Spécialiste en rénovation intérieure, plomberie, salle de bain et carrelage en Île-de-France.
+                Spécialiste plaquiste en Provence-Alpes-Côte d'Azur. Cloisons sèches, doublages et faux plafonds depuis 2015.
               </p>
               <a 
-                href="tel:0758850226" 
+                href="tel:0659764995" 
                 className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
               >
-                07 58 85 02 26
+                06 59 76 49 95
               </a>
             </motion.div>
 
@@ -122,11 +127,11 @@ export default function Footer() {
               <h3 className="text-lg font-semibold">Contact</h3>
               <div className="space-y-2">
                 <a 
-                  href="tel:0758850226"
+                  href="tel:0659764995"
                   className="text-slate-300 hover:text-white text-sm transition-colors duration-200 block flex items-center space-x-2"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>07 58 85 02 26</span>
+                  <span>06 59 76 49 95</span>
                 </a>
                 <p className="text-slate-400 text-xs">
                   Service gratuit 7j/7 de 9h à 19h
@@ -147,7 +152,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              © {currentYear} Neagu Ionut. Tous droits réservés.
+              © {currentYear} MARQUES VAZ PLACO. Tous droits réservés.
             </motion.p>
 
             {/* Powered by */}

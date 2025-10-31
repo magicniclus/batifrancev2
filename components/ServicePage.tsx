@@ -49,12 +49,6 @@ interface ServicePageProps {
     address: string;
   };
   
-  // Prix indicatifs (optionnel)
-  pricing?: {
-    title: string;
-    description: string;
-    priceRange: string;
-  }[];
 }
 
 export default function ServicePage({
@@ -71,8 +65,7 @@ export default function ServicePage({
   subServices,
   advantages,
   serviceArea,
-  contactInfo,
-  pricing
+  contactInfo
 }: ServicePageProps) {
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
@@ -135,7 +128,7 @@ export default function ServicePage({
     "description": description,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "NEAGU LONUT",
+      "name": "MARQUES VAZ PLACO",
       "telephone": contactInfo.phone,
       "email": contactInfo.email,
       "address": {
@@ -315,35 +308,6 @@ export default function ServicePage({
                 </div>
               </motion.div>
 
-              {/* Prix indicatifs (si fournis) */}
-              {pricing && pricing.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-8">
-                    Tarifs indicatifs
-                  </h3>
-                  <div className="bg-gray-50 rounded-xl p-6">
-                    <div className="space-y-4">
-                      {pricing.map((price, index) => (
-                        <div key={index} className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0">
-                          <div>
-                            <h4 className="font-semibold text-gray-900">{price.title}</h4>
-                            <p className="text-sm text-gray-600">{price.description}</p>
-                          </div>
-                          <span className="text-lg font-bold text-orange-500">{price.priceRange}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-sm text-gray-500 mt-4 italic">
-                      * Tarifs indicatifs, devis personnalisé sur demande
-                    </p>
-                  </div>
-                </motion.div>
-              )}
             </div>
 
             {/* Sidebar */}

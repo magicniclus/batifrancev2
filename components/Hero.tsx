@@ -356,10 +356,12 @@ export default function Hero({
             ease: "easeInOut"
           }}
           onClick={() => {
-            window.scrollTo({
-              top: window.innerHeight,
-              behavior: 'smooth'
-            });
+            if (typeof window !== 'undefined') {
+              window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+              });
+            }
           }}
         >
           <span className="text-sm mb-2 opacity-80">Découvrir</span>

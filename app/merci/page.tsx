@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 
 // Métadonnées SEO pour la page merci
 export const metadata: Metadata = {
-  title: "Merci - NEAGU LONUT | Demande Reçue",
-  description: "Merci pour votre demande de devis ! NEAGU LONUT vous recontactera rapidement pour votre projet de rénovation intérieure, plomberie, salle de bain ou carrelage en Île-de-France.",
-  keywords: "merci demande devis, confirmation contact NEAGU LONUT, demande reçue rénovation, suivi projet Île-de-France",
-  authors: [{ name: "NEAGU LONUT" }],
-  creator: "NEAGU LONUT",
-  publisher: "NEAGU LONUT",
+  title: "Merci - MARQUES VAZ PLACO | Demande Reçue",
+  description: "Merci pour votre demande de devis ! MARQUES VAZ PLACO vous recontactera rapidement pour votre projet de plâtrerie, cloisons sèches, doublages ou faux plafonds en Provence-Alpes-Côte d'Azur.",
+  keywords: "merci demande devis, confirmation contact MARQUES VAZ PLACO, demande reçue plaquiste, suivi projet PACA",
+  authors: [{ name: "AMILTON VAZ" }],
+  creator: "MARQUES VAZ PLACO",
+  publisher: "MARQUES VAZ PLACO",
   robots: {
     index: false,
     follow: false,
@@ -152,7 +152,7 @@ export default function MerciPage() {
                   <Phone className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">01 23 45 67 89</p>
+                  <p className="font-medium text-gray-900">06 59 76 49 95</p>
                   <p className="text-sm text-gray-600">Lun-Ven 9h-18h</p>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function MerciPage() {
                   <Mail className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">contact@trouvermonchantier.fr</p>
+                  <p className="font-medium text-gray-900">amiltonvazmarques@gmail.com</p>
                   <p className="text-sm text-gray-600">Réponse sous 2h</p>
                 </div>
               </div>

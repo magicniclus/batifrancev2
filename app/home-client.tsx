@@ -22,48 +22,48 @@ export default function HomeClient() {
   
   const servicesData = [
     {
-      title: "Rénovation Intérieure",
-      subtitle: "Transformation complète de vos espaces",
-      content: "Rénovation complète d'appartements et maisons : cloisons, sols, peinture, électricité. Nous transformons vos espaces selon vos besoins et votre style.",
+      title: "Cloisons Sèches",
+      subtitle: "Aménagement et séparation d'espaces",
+      content: "Pose de cloisons sèches en plaques de plâtre pour créer, séparer ou réorganiser vos espaces intérieurs. Solutions sur mesure avec isolation phonique et thermique.",
       image: "/placo.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b",
-      href: "/services/renovation-interieure"
+      href: "/services/cloisons-seches"
     },
     {
-      title: "Plomberie",
-      subtitle: "Installation et réparation",
-      content: "Installation et réparation de systèmes de plomberie : canalisations, robinetterie, chauffe-eau. Intervention rapide pour tous vos problèmes de plomberie.",
+      title: "Doublages",
+      subtitle: "Isolation et finition murale",
+      content: "Doublage des murs pour améliorer l'isolation thermique et phonique. Pose de plaques de plâtre sur ossature métallique ou collage direct selon vos besoins.",
       image: "/plomberie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2",
-      href: "/services/plomberie"
+      href: "/services/doublages"
     },
     {
-      title: "Salle de Bain",
-      subtitle: "Aménagement sur mesure",
-      content: "Création et rénovation de salles de bain complètes : carrelage, sanitaires, douche, baignoire. Design moderne et fonctionnel adapté à vos besoins.",
+      title: "Faux Plafonds",
+      subtitle: "Plafonds suspendus modernes",
+      content: "Installation de faux plafonds suspendus en plaques de plâtre. Intégration d'éclairage, amélioration de l'isolation et création de volumes sur mesure.",
       image: "/maison-work.png",
       gradientFrom: "#28a745",
       gradientTo: "#20c997",
-      href: "/services/salle-de-bain"
+      href: "/services/faux-plafonds"
     },
     {
-      title: "Carrelage",
-      subtitle: "Pose professionnelle",
-      content: "Pose de carrelage sol et mur, faïence, mosaïque. Travail soigné avec finitions parfaites pour tous types de revêtements céramiques.",
+      title: "Finitions Plâtrerie",
+      subtitle: "Finitions et enduits",
+      content: "Réalisation de finitions parfaites : enduits, lissage, ponçage. Préparation des surfaces pour peinture ou revêtements avec un rendu professionnel.",
       image: "/mur.png",
       gradientFrom: "#fd7e14",
       gradientTo: "#ffc107",
-      href: "/services/carrelage"
+      href: "/services/finitions-platrerie"
     }
   ];
 
   const contactInfo = {
-    address: "92150 Suresnes\nÎle-de-France\nRayon d'intervention : Hauts-de-Seine",
-    phone: "07 58 85 02 26",
-    email: "idarenovation2022@gmail.com",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Suresnes,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
+    address: "Provence-Alpes-Côte d'Azur\nMarseille et environs\nRayon d'intervention : 80 km",
+    phone: "06 59 76 49 95",
+    email: "amiltonvazmarques@gmail.com",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Marseille,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -114,7 +114,7 @@ export default function HomeClient() {
       <TeamSection config={config.team} />
       <ContactSection 
         title="Contactez-nous"
-        subtitle="Parlons de votre projet de rénovation intérieure, plomberie, salle de bain ou carrelage en Île-de-France"
+        subtitle="Parlons de votre projet de plâtrerie, cloisons sèches, doublages ou faux plafonds en Provence-Alpes-Côte d'Azur"
         contactInfo={contactInfo} 
       />
 
