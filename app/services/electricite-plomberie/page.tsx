@@ -24,7 +24,7 @@ const electricitePlomberieConfig = {
   heroSubtitle: "Nos experts en électricité et plomberie assurent des installations fiables et conformes aux normes en vigueur.",
   
   // Localisation
-  sector: "BTP - Électricité et Plomberie",
+  sector: "Rénovation - Électricité et Plomberie",
   location: "Paris",
   
   // Description détaillée

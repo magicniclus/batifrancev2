@@ -23,7 +23,7 @@ const renovationGlobaleConfig = {
   heroSubtitle: "Transformations et nettoyage complets pour donner une nouvelle vie à vos espaces de vie et de travail.",
   
   // Localisation
-  sector: "BTP - Rénovation Globale",
+  sector: "Rénovation - Rénovation Globale",
   location: "Paris",
   
   // Description détaillée

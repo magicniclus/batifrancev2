@@ -100,7 +100,7 @@ export default function Navigation() {
               </motion.div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-gray-900">BATI FRANCE</span>
-                <span className="text-xs text-gray-600 font-medium">spécialistes BTP</span>
+                <span className="text-xs text-gray-600 font-medium">spécialistes en rénovation</span>
               </div>
             </Link>
           </motion.div>
@@ -286,7 +286,7 @@ export default function Navigation() {
                     BATI FRANCE
                   </span>
                   <span className="text-xs text-gray-400 font-medium">
-                    spécialistes BTP
+                    spécialistes en rénovation
                   </span>
                 </div>
               </div>

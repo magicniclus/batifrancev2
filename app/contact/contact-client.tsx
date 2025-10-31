@@ -70,7 +70,7 @@ export default function ContactClient() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Un projet de BTP ? Notre équipe Bati France est là pour vous accompagner dans tous vos projets de construction et rénovation.
+              Un projet de rénovation ? Notre équipe Bati France est là pour vous accompagner dans tous vos projets de construction et rénovation.
             </p>
           </motion.div>
         </div>

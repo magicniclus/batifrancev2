@@ -23,7 +23,7 @@ const peintureRavalementConfig = {
   heroSubtitle: "Spécialisés en peinture générale et ravalement, nous transformons vos espaces avec soin et professionnalisme.",
   
   // Localisation
-  sector: "BTP - Peinture et Ravalement",
+  sector: "Rénovation - Peinture et Ravalement",
   location: "Paris",
   
   // Description détaillée

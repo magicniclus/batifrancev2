@@ -14,10 +14,10 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Bati France - Spécialistes BTP & Rénovation à Paris",
+  title: "Bati France - Spécialistes en Rénovation à Paris",
   description: "Bati France, spécialistes dans tous les corps d'état : peinture, ravalement, électricité, plomberie, rénovation globale. Devis gratuit à Paris 75020.",
   keywords: [
-    "BTP Paris",
+    "rénovation Paris",
     "peinture ravalement Paris",
     "électricité plomberie Paris",
     "rénovation globale Paris",
@@ -25,15 +25,15 @@ export const seoConfig: SEOConfig = {
     "travaux rénovation 75020",
     "Bati France",
     "construction Paris",
-    "artisan BTP",
+    "artisan rénovation",
     "devis gratuit",
-    "spécialistes BTP",
+    "spécialistes en rénovation",
     "tous corps d'état",
     "entrepreneur du bâtiment"
   ],
   author: "Bati France",
   siteUrl: "https://batifrance.fr",
-  siteName: "Bati France - Spécialistes BTP",
+  siteName: "Bati France - Spécialistes en Rénovation",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
@@ -115,7 +115,7 @@ export const organizationSchema = {
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
   "name": "Bati France",
-  "legalName": "Bati France - Spécialistes BTP",
+  "legalName": "Bati France - Spécialistes en Rénovation",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
@@ -158,7 +158,7 @@ export const organizationSchema = {
     "Électricité et Plomberie", 
     "Rénovation globale",
     "Construction",
-    "Travaux BTP"
+    "Travaux de rénovation"
   ],
   "priceRange": "€€",
   "openingHours": "Mo-Sa 08:00-18:00",
@@ -178,7 +178,7 @@ export const servicesSchema = {
   "areaServed": organizationSchema.areaServed,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Services BTP",
+    "name": "Services de rénovation",
     "itemListElement": [
       {
         "@type": "Offer",
