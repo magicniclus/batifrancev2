@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { seoConfig } from './seo-config';
 
 // Fonction utilitaire pour générer les métadonnées SEO des pages services
 export function generateServiceMetadata(
@@ -7,32 +8,43 @@ export function generateServiceMetadata(
   description: string,
   keywords: string[]
 ): Metadata {
-  const title = `${serviceName} ${location} - NEAGU LONUT | Devis Gratuit`;
-  const metaDescription = `${description} Intervention rapide en ${location}. Devis gratuit et personnalisé.`;
+  const title = `${serviceName} ${location} - Bati France | Devis Gratuit`;
+  const metaDescription = `${description} Devis gratuit et personnalisé pour vos travaux de ${serviceName.toLowerCase()} à ${location}. Contactez Bati France.`;
 
   return {
     title,
     description: metaDescription,
-    keywords: keywords.join(', '),
-    authors: [{ name: 'NEAGU LONUT' }],
-    creator: 'NEAGU LONUT',
-    publisher: 'NEAGU LONUT',
+    keywords: [...keywords, 'devis gratuit', 'Bati France', location].join(', '),
+    authors: [{ name: 'Bati France' }],
+    creator: 'Bati France',
+    publisher: 'Bati France',
     formatDetection: {
       email: false,
       address: false,
       telephone: false,
     },
+    metadataBase: new URL(seoConfig.siteUrl),
     openGraph: {
       title,
       description: metaDescription,
-      type: 'website',
+      url: `${seoConfig.siteUrl}/services/${serviceName.toLowerCase().replace(/\s+/g, '-').replace(/é/g, 'e')}`,
+      siteName: seoConfig.siteName,
+      images: [
+        {
+          url: `${seoConfig.siteUrl}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
       locale: 'fr_FR',
-      siteName: 'NEAGU LONUT - Rénovation Intérieure',
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description: metaDescription,
+      images: [`${seoConfig.siteUrl}/og-image.jpg`],
     },
     robots: {
       index: true,
