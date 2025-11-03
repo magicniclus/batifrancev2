@@ -1,43 +1,39 @@
-import { Metadata } from 'next';
 import ServicePage from '@/components/ServicePage';
+import { generateServiceMetadata } from '@/lib/service-metadata';
+import { Metadata } from 'next';
 
-// Métadonnées SEO pour la page Cloisons Sèches
-export const metadata: Metadata = {
-  title: "Cloisons Sèches - MARQUES VAZ PLACO | Devis Gratuit Plaquiste PACA",
-  description: "Expert en cloisons sèches en Provence-Alpes-Côte d'Azur. MARQUES VAZ PLACO réalise vos cloisons en plaques de plâtre. Devis gratuit et personnalisé à Marseille et environs.",
-  keywords: "cloisons sèches Marseille, placo cloisons PACA, séparation espaces Provence, aménagement intérieur Bouches-du-Rhône, devis gratuit cloisons, plaquiste Marseille",
-  authors: [{ name: "AMILTON VAZ" }],
-  creator: "MARQUES VAZ PLACO",
-  publisher: "MARQUES VAZ PLACO",
-  openGraph: {
-    title: "Cloisons Sèches PACA - MARQUES VAZ PLACO | Devis Gratuit",
-    description: "Spécialiste cloisons sèches en Provence-Alpes-Côte d'Azur. Aménagement et séparation d'espaces. Devis gratuit et personnalisé.",
-    type: "website",
-    locale: "fr_FR",
-    siteName: "MARQUES VAZ PLACO - Plaquiste Professionnel",
-  },
-  twitter: {
-    card: "summary",
-    title: "Cloisons Sèches PACA - Devis Gratuit",
-    description: "Expert cloisons sèches en Provence-Alpes-Côte d'Azur. Devis gratuit et personnalisé.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-export default function CloisonsSechesPrestationPage() {
-  const contactInfo = {
-    phone: "06 59 76 49 95",
-    email: "amiltonvazmarques@gmail.com",
-    address: "Provence-Alpes-Côte d'Azur, Marseille et environs"
-  };
-
-  const subServices = [
+const cloisonsSecheConfig = {
+  // SEO et métadonnées
+  title: "Cloisons Sèches Paris - Bati France",
+  description: "Installation de cloisons sèches et aménagement d'espaces intérieurs. Devis gratuit et personnalisé à Paris 75020.",
+  keywords: [
+    "cloisons sèches Paris",
+    "placo cloisons",
+    "séparation espaces",
+    "aménagement intérieur",
+    "cloisons placo Paris",
+    "installation cloisons",
+    "devis cloisons gratuit"
+  ],
+  
+  // Contenu principal
+  serviceName: "Cloisons Sèches",
+  heroImage: "/placo.png",
+  heroTitle: "Cloisons Sèches à Paris",
+  heroSubtitle: "Aménagement et séparation d'espaces avec Bati France",
+  
+  // Localisation
+  sector: "Rénovation - Cloisons Sèches",
+  location: "Paris",
+  
+  // Description détaillée
+  mainDescription: "Bati France, votre spécialiste en cloisons sèches depuis plusieurs années, vous accompagne dans tous vos projets d'aménagement intérieur à Paris. Nous réalisons des cloisons en plaques de plâtre sur ossature métallique pour créer, séparer ou réorganiser vos espaces intérieurs selon vos besoins et votre budget.",
+  
+  // Sous-prestations
+  subServices: [
     {
       title: "Cloisons de distribution",
-      description: "Création de nouvelles pièces et séparation d'espaces avec ossature métallique et plaques de plâtre standard ou hydrofuge."
+      description: "Création de nouvelles pièces et séparation d'espaces avec ossature métallique et plaques de plâtre."
     },
     {
       title: "Cloisons acoustiques",
@@ -59,9 +55,10 @@ export default function CloisonsSechesPrestationPage() {
       title: "Finitions et peinture",
       description: "Enduits, lissage et préparation des surfaces pour peinture ou pose de revêtements muraux."
     }
-  ];
-
-  const advantages = [
+  ],
+  
+  // Avantages
+  advantages: [
     "Devis gratuit et personnalisé",
     "Estimation gratuite et sans engagement",
     "Tarification transparente",
@@ -69,41 +66,37 @@ export default function CloisonsSechesPrestationPage() {
     "Matériaux de qualité certifiés",
     "Isolation phonique et thermique",
     "Respect des délais convenus",
-    "Garantie sur tous les travaux",
-    "Conseil personnalisé et technique",
-    "Finitions parfaites",
-    "Intervention rapide",
-    "Suivi post-travaux"
-  ];
+    "Garantie sur tous les travaux"
+  ],
+  
+  // Zone d'intervention
+  serviceArea: [
+    "Paris 20e",
+    "Paris centre",
+    "Belleville",
+    "Ménilmontant",
+    "Père Lachaise",
+    "Gambetta",
+    "République",
+    "Bastille"
+  ],
+  
+  // Contact
+  contactInfo: {
+    phone: "+33 6 59 69 94 15",
+    email: "batifrance@outlook.fr",
+    address: "17 avenue Gambetta, Paris 75020"
+  }
+};
 
-  const serviceArea = [
-    "Marseille",
-    "Aix-en-Provence", 
-    "Aubagne",
-    "Martigues",
-    "Salon-de-Provence",
-    "Istres",
-    "Arles",
-    "Toulon",
-    "Provence-Alpes-Côte d'Azur"
-  ];
+// Métadonnées SEO automatiques
+export const metadata: Metadata = generateServiceMetadata(
+  cloisonsSecheConfig.serviceName,
+  cloisonsSecheConfig.location,
+  cloisonsSecheConfig.description,
+  cloisonsSecheConfig.keywords
+);
 
-  return (
-    <ServicePage
-      title="Cloisons Sèches - MARQUES VAZ PLACO | Devis Gratuit Plaquiste PACA"
-      description="Expert en cloisons sèches en Provence-Alpes-Côte d'Azur. MARQUES VAZ PLACO réalise vos cloisons en plaques de plâtre. Devis gratuit et personnalisé à Marseille et environs."
-      keywords={["cloisons sèches Marseille", "placo cloisons PACA", "séparation espaces Provence", "aménagement intérieur Bouches-du-Rhône", "devis gratuit cloisons", "plaquiste Marseille"]}
-      serviceName="Cloisons Sèches"
-      heroImage="/placo.png"
-      heroTitle="Cloisons Sèches en Provence-Alpes-Côte d'Azur"
-      heroSubtitle="Aménagement et séparation d'espaces avec MARQUES VAZ PLACO"
-      sector="Provence-Alpes-Côte d'Azur"
-      location="Marseille"
-      mainDescription="MARQUES VAZ PLACO, votre spécialiste en cloisons sèches depuis 2015, vous accompagne dans tous vos projets d'aménagement intérieur en Provence-Alpes-Côte d'Azur. Nous réalisons des cloisons en plaques de plâtre sur ossature métallique pour créer, séparer ou réorganiser vos espaces intérieurs selon vos besoins et votre budget."
-      subServices={subServices}
-      advantages={advantages}
-      serviceArea={serviceArea}
-      contactInfo={contactInfo}
-    />
-  );
+export default function CloisonsSechesPrestationPage() {
+  return <ServicePage {...cloisonsSecheConfig} />;
 }

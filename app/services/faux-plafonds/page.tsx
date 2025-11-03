@@ -1,40 +1,49 @@
-import { Metadata } from 'next';
 import ServicePage from '@/components/ServicePage';
+import { generateServiceMetadata } from '@/lib/service-metadata';
+import { Metadata } from 'next';
 
-// Métadonnées SEO pour la page Faux Plafonds
-export const metadata: Metadata = {
-  title: "Faux Plafonds - MARQUES VAZ PLACO | Devis Gratuit Plafonds PACA",
-  description: "Expert en faux plafonds en Provence-Alpes-Côte d'Azur. MARQUES VAZ PLACO installe vos plafonds suspendus avec intégration d'éclairage. Devis gratuit à Marseille et environs.",
-  keywords: "faux plafonds Marseille, plafonds suspendus PACA, plafond placo Provence, éclairage intégré Bouches-du-Rhône, devis gratuit plafonds, plaquiste Marseille",
-  authors: [{ name: "AMILTON VAZ" }],
-  creator: "MARQUES VAZ PLACO",
-  publisher: "MARQUES VAZ PLACO",
-  openGraph: {
-    title: "Faux Plafonds PACA - MARQUES VAZ PLACO | Devis Gratuit",
-    description: "Spécialiste faux plafonds en Provence-Alpes-Côte d'Azur. Plafonds suspendus modernes avec éclairage intégré. Devis gratuit et personnalisé.",
-    type: "website",
-    locale: "fr_FR",
-    siteName: "MARQUES VAZ PLACO - Plaquiste Professionnel",
-  },
-  twitter: {
-    card: "summary",
-    title: "Faux Plafonds PACA - Devis Gratuit",
-    description: "Expert faux plafonds en Provence-Alpes-Côte d'Azur. Devis gratuit et personnalisé.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+const fauxPlafondsConfig = {
+  // SEO et métadonnées
+  title: "Faux Plafonds Paris - Bati France",
+  description: "Installation de faux plafonds et plafonds suspendus avec intégration d'éclairage. Devis gratuit et personnalisé à Paris 75020.",
+  keywords: [
+    "faux plafonds Paris",
+    "plafonds suspendus",
+    "plafond placo",
+    "éclairage intégré",
+    "devis gratuit plafonds",
+    "faux plafond Paris",
+    "plafond moderne"
+  ],
+  
+  // Contenu principal
+  serviceName: "Faux Plafonds",
+  heroImage: "/maison-work.png",
+  heroTitle: "Faux Plafonds à Paris",
+  heroSubtitle: "Plafonds suspendus modernes avec Bati France",
+  
+  // Localisation
+  sector: "Rénovation - Faux Plafonds",
+  location: "Paris",
+  
+  // Description détaillée
+  mainDescription: "Bati France, spécialiste des faux plafonds depuis plusieurs années, transforme vos intérieurs à Paris. Nous installons des plafonds suspendus en plaques de plâtre avec intégration d'éclairage, amélioration de l'isolation et création de volumes sur mesure pour moderniser et embellir vos espaces."
 };
 
-export default function FauxPlafondsPrestationPage() {
-  const contactInfo = {
-    phone: "06 59 76 49 95",
-    email: "amiltonvazmarques@gmail.com",
-    address: "Provence-Alpes-Côte d'Azur, Marseille et environs"
-  };
+// Métadonnées SEO automatiques
+export const metadata: Metadata = generateServiceMetadata(
+  fauxPlafondsConfig.serviceName,
+  fauxPlafondsConfig.location,
+  fauxPlafondsConfig.description,
+  fauxPlafondsConfig.keywords
+);
 
-  const subServices = [
+// Compléter la configuration
+const fauxPlafondsConfigComplete = {
+  ...fauxPlafondsConfig,
+  
+  // Sous-prestations
+  subServices: [
     {
       title: "Plafonds suspendus",
       description: "Installation de faux plafonds sur ossature métallique avec plaques de plâtre pour masquer les défauts et créer des volumes."
@@ -59,9 +68,10 @@ export default function FauxPlafondsPrestationPage() {
       title: "Finitions et peinture",
       description: "Réalisation des finitions parfaites avec enduits, lissage et préparation pour peinture ou revêtements."
     }
-  ];
-
-  const advantages = [
+  ],
+  
+  // Avantages
+  advantages: [
     "Devis gratuit et personnalisé",
     "Estimation gratuite et sans engagement",
     "Tarification transparente",
@@ -69,41 +79,29 @@ export default function FauxPlafondsPrestationPage() {
     "Intégration d'éclairage LED",
     "Amélioration acoustique",
     "Masquage des défauts existants",
-    "Création de volumes sur mesure",
-    "Matériaux de qualité certifiés",
-    "Pose professionnelle et soignée",
-    "Garantie sur tous les travaux",
-    "Suivi post-travaux"
-  ];
+    "Garantie sur tous les travaux"
+  ],
+  
+  // Zone d'intervention
+  serviceArea: [
+    "Paris 20e",
+    "Paris centre",
+    "Belleville",
+    "Ménilmontant",
+    "Père Lachaise",
+    "Gambetta",
+    "République",
+    "Bastille"
+  ],
+  
+  // Contact
+  contactInfo: {
+    phone: "+33 6 59 69 94 15",
+    email: "batifrance@outlook.fr",
+    address: "17 avenue Gambetta, Paris 75020"
+  }
+};
 
-  const serviceArea = [
-    "Marseille",
-    "Aix-en-Provence", 
-    "Aubagne",
-    "Martigues",
-    "Salon-de-Provence",
-    "Istres",
-    "Arles",
-    "Toulon",
-    "Provence-Alpes-Côte d'Azur"
-  ];
-
-  return (
-    <ServicePage
-      title="Faux Plafonds - MARQUES VAZ PLACO | Devis Gratuit Plafonds PACA"
-      description="Expert en faux plafonds en Provence-Alpes-Côte d'Azur. MARQUES VAZ PLACO installe vos plafonds suspendus avec intégration d'éclairage. Devis gratuit à Marseille et environs."
-      keywords={["faux plafonds Marseille", "plafonds suspendus PACA", "plafond placo Provence", "éclairage intégré Bouches-du-Rhône", "devis gratuit plafonds", "plaquiste Marseille"]}
-      serviceName="Faux Plafonds"
-      heroImage="/maison-work.png"
-      heroTitle="Faux Plafonds en Provence-Alpes-Côte d'Azur"
-      heroSubtitle="Plafonds suspendus modernes avec MARQUES VAZ PLACO"
-      sector="Provence-Alpes-Côte d'Azur"
-      location="Marseille"
-      mainDescription="MARQUES VAZ PLACO, spécialiste des faux plafonds depuis 2015, transforme vos intérieurs en Provence-Alpes-Côte d'Azur. Nous installons des plafonds suspendus en plaques de plâtre avec intégration d'éclairage, amélioration de l'isolation et création de volumes sur mesure pour moderniser et embellir vos espaces."
-      subServices={subServices}
-      advantages={advantages}
-      serviceArea={serviceArea}
-      contactInfo={contactInfo}
-    />
-  );
+export default function FauxPlafondsPrestationPage() {
+  return <ServicePage {...fauxPlafondsConfigComplete} />;
 }

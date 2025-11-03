@@ -151,12 +151,24 @@ export const organizationSchema = {
     {
       "@type": "City",
       "name": "Paris 20e"
+    },
+    {
+      "@type": "City",
+      "name": "Belleville"
+    },
+    {
+      "@type": "City",
+      "name": "Ménilmontant"
     }
   ],
   "serviceType": [
     "Peinture et Ravalement",
     "Électricité et Plomberie", 
     "Rénovation globale",
+    "Cloisons Sèches",
+    "Doublages et Isolation",
+    "Faux Plafonds",
+    "Finitions Plâtrerie",
     "Construction",
     "Travaux de rénovation"
   ],
@@ -202,6 +214,38 @@ export const servicesSchema = {
           "@type": "Service", 
           "name": "Rénovation globale",
           "description": "Transformations et nettoyage, rénovation complète de vos espaces"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Cloisons Sèches",
+          "description": "Installation de cloisons sèches et aménagement d'espaces intérieurs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Doublages et Isolation",
+          "description": "Doublages et isolation thermique et phonique de vos murs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Faux Plafonds",
+          "description": "Installation de faux plafonds et plafonds suspendus avec intégration d'éclairage"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Finitions Plâtrerie",
+          "description": "Finitions plâtrerie, enduits, lissage et préparation surfaces"
         }
       }
     ]

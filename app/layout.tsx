@@ -5,32 +5,32 @@ import Footer from "../components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "MARQUES VAZ PLACO - Plaquiste Professionnel en Provence-Alpes-Côte d'Azur",
-  description: "MARQUES VAZ PLACO, expert plaquiste en Provence-Alpes-Côte d'Azur. Spécialisé en cloisons sèches, doublages et faux plafonds depuis 2015. Devis gratuit et intervention rapide à Marseille et environs.",
-  keywords: "plaquiste Marseille, cloisons sèches PACA, doublage isolation Provence, faux plafond Bouches-du-Rhône, MARQUES VAZ PLACO, plâtrerie Marseille, devis gratuit, artisan qualifié, travaux placo, BTP PACA",
-  authors: [{ name: "AMILTON VAZ" }],
-  creator: "MARQUES VAZ PLACO",
-  publisher: "MARQUES VAZ PLACO",
+  title: "Bati France - Spécialistes en Rénovation à Paris | Devis Gratuit",
+  description: "Bati France, spécialistes dans tous les corps d'état : peinture, ravalement, électricité, plomberie, rénovation globale. Devis gratuit à Paris 75020. Intervention rapide et professionnelle.",
+  keywords: "rénovation Paris, peinture ravalement Paris, électricité plomberie Paris, rénovation globale Paris, entrepreneur bâtiment Paris, travaux rénovation 75020, Bati France, construction Paris, artisan rénovation, devis gratuit",
+  authors: [{ name: "Bati France" }],
+  creator: "Bati France",
+  publisher: "Bati France",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://marquesvazplaco.fr"),
+  metadataBase: new URL("https://batifrance.fr"),
   alternates: {
-    canonical: "https://marquesvazplaco.fr",
+    canonical: "https://batifrance.fr",
   },
   openGraph: {
-    title: "MARQUES VAZ PLACO - Expert Plaquiste en Provence-Alpes-Côte d'Azur",
-    description: "MARQUES VAZ PLACO, spécialiste plaquiste, cloisons sèches, doublages et faux plafonds. Intervention rapide en PACA. Devis gratuit et personnalisé.",
-    url: "https://marquesvazplaco.fr",
-    siteName: "MARQUES VAZ PLACO - Plaquiste Professionnel",
+    title: "Bati France - Spécialistes en Rénovation à Paris",
+    description: "Bati France, spécialistes dans tous les corps d'état : peinture, ravalement, électricité, plomberie, rénovation globale. Devis gratuit à Paris.",
+    url: "https://batifrance.fr",
+    siteName: "Bati France - Spécialistes en Rénovation",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MARQUES VAZ PLACO - Plaquiste en Provence-Alpes-Côte d'Azur",
+        alt: "Bati France - Spécialistes en Rénovation à Paris",
       },
     ],
     locale: "fr_FR",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MARQUES VAZ PLACO - Expert Plaquiste",
-    description: "Spécialiste plaquiste, cloisons sèches, doublages et faux plafonds en Provence-Alpes-Côte d'Azur. Devis gratuit.",
+    title: "Bati France - Spécialistes en Rénovation",
+    description: "Spécialistes dans tous les corps d'état : peinture, ravalement, électricité, plomberie, rénovation globale à Paris.",
     images: ["/og-image.jpg"],
   },
   robots: {

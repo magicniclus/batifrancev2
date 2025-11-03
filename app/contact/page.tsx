@@ -3,23 +3,23 @@ import ContactClient from './contact-client';
 
 // Métadonnées SEO pour la page contact
 export const metadata: Metadata = {
-  title: "Contact - MARQUES VAZ PLACO | Devis Gratuit Plaquiste PACA",
-  description: "Contactez MARQUES VAZ PLACO pour votre projet de plâtrerie, cloisons sèches, doublages ou faux plafonds en Provence-Alpes-Côte d'Azur. Devis gratuit et personnalisé. Intervention rapide à Marseille et environs.",
-  keywords: "contact MARQUES VAZ PLACO, devis gratuit plaquiste, contact plaquiste PACA, devis cloisons sèches Marseille, contact artisan Bouches-du-Rhône, plâtrerie contact",
-  authors: [{ name: "AMILTON VAZ" }],
-  creator: "MARQUES VAZ PLACO",
-  publisher: "MARQUES VAZ PLACO",
+  title: "Contact - Bati France | Devis Gratuit Rénovation Paris",
+  description: "Contactez Bati France pour votre projet de rénovation : peinture, ravalement, électricité, plomberie, rénovation globale à Paris. Devis gratuit et personnalisé. Intervention rapide dans le 20ème arrondissement.",
+  keywords: "contact Bati France, devis gratuit rénovation, contact rénovation Paris, devis peinture Paris, contact artisan 75020, rénovation contact",
+  authors: [{ name: "Bati France" }],
+  creator: "Bati France",
+  publisher: "Bati France",
   openGraph: {
-    title: "Contact MARQUES VAZ PLACO - Devis Gratuit Plaquiste PACA",
-    description: "Contactez notre expert plaquiste pour votre projet. Devis gratuit et personnalisé en Provence-Alpes-Côte d'Azur.",
+    title: "Contact Bati France - Devis Gratuit Rénovation Paris",
+    description: "Contactez nos experts en rénovation pour votre projet. Devis gratuit et personnalisé à Paris.",
     type: "website",
     locale: "fr_FR",
-    siteName: "MARQUES VAZ PLACO - Plaquiste Professionnel",
+    siteName: "Bati France - Spécialistes en Rénovation",
   },
   twitter: {
     card: "summary",
-    title: "Contact MARQUES VAZ PLACO - Devis Gratuit",
-    description: "Contactez notre expert plaquiste pour votre projet en PACA.",
+    title: "Contact Bati France - Devis Gratuit",
+    description: "Contactez nos experts en rénovation pour votre projet à Paris.",
   },
   robots: {
     index: true,
