@@ -1,6 +1,5 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
@@ -92,104 +91,70 @@ export default function ProjectGallery({
       <section id={id} className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {galleryTitle}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               {gallerySubtitle}
             </p>
-          </motion.div>
+          </div>
 
           {/* Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AnimatePresence mode="popLayout">
-              {displayedImages.map((image, index) => (
-                <motion.div
-                  key={`${image.src}-${index}`}
-                  className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ 
-                    duration: 0.4, 
-                    delay: index >= galleryInitialDisplayCount ? (index - galleryInitialDisplayCount) * 0.1 : 0,
-                    type: "spring",
-                    stiffness: 100
-                  }}
-                  whileHover={{ y: -5 }}
-                  onClick={() => openLightbox(index)}
-                  layout
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                </motion.div>
-              ))}
-            </AnimatePresence>
+            {displayedImages.map((image, index) => (
+              <div
+                key={`${image.src}-${index}`}
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group"
+                onClick={() => openLightbox(index)}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20" />
+              </div>
+            ))}
           </div>
 
           {/* Buttons */}
           <div className="text-center mt-12 space-y-4">
             {hasMoreImages && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
+              <div>
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl"
                   onClick={showMoreImages}
                 >
                   Voir plus de réalisations ({galleryImages.length - displayCount} restantes)
                 </Button>
-              </motion.div>
+              </div>
             )}
             
             {showingAll && isExpanded && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
+              <div>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-orange-500 text-orange-500 hover:bg-orange-50 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-50 shadow-lg hover:shadow-xl"
                   onClick={showLessImages}
                 >
                   Voir moins de photos
                 </Button>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
       </section>
 
       {/* Lightbox Modal */}
-      <AnimatePresence>
-        {lightboxOpen && (
-          <motion.div
-            className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={closeLightbox}
-          >
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
+          onClick={closeLightbox}
+        >
             {/* Close Button */}
             <button
               className="absolute top-6 right-6 z-30 text-white hover:text-gray-300 transition-colors bg-black/50 rounded-full p-2"
@@ -204,12 +169,8 @@ export default function ProjectGallery({
             </div>
 
             {/* Carousel Container */}
-            <motion.div
+            <div
               className="relative w-full md:h-full flex items-center justify-center md:flex md:items-center md:justify-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
             >
               <Carousel 
@@ -260,10 +221,9 @@ export default function ProjectGallery({
                 </button>
               </Carousel>
 
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </div>
+        </div>
+      )}
     </>
   );
 }
