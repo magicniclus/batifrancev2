@@ -18,6 +18,8 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [showSectorsDropdown, setShowSectorsDropdown] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
   const phoneNumber = "+33 6 59 69 94 15";
 
@@ -29,18 +31,37 @@ export default function Navigation() {
     { name: 'Peinture et Ravalement', href: '/services/peinture-ravalement' },
     { name: 'Électricité et Plomberie', href: '/services/electricite-plomberie' },
     { name: 'Rénovation globale', href: '/services/renovation-globale' },
+    { name: 'Cloisons sèches', href: '/services/cloisons-seches' },
+    { name: 'Finitions plâtrerie', href: '/services/finitions-platrerie' },
+  ];
+
+  // Liste des secteurs pour le dropdown
+  const sectorsLinks = [
+    { name: 'Paris 20ᵉ', href: '/secteur/renovation-paris-20e' },
+    { name: 'Montreuil', href: '/secteur/renovation-montreuil' },
+    { name: 'Vincennes', href: '/secteur/renovation-vincennes' },
+    { name: 'Bagnolet', href: '/secteur/renovation-bagnolet' },
+    { name: 'Saint-Mandé', href: '/secteur/renovation-saint-mande' },
+    { name: 'Voir tous nos secteurs', href: '/secteur' },
   ];
 
   // Navigation adaptative selon la page
   const navigationLinks = isHomePage ? [
     { name: 'Notre expertise', href: '#expertise' },
-    { name: 'Services', href: '#services', hasDropdown: true },
+    { name: 'Services', href: '#services', hasDropdown: true, dropdownType: 'services' },
+    { name: 'Secteurs', href: '/secteur', hasDropdown: true, dropdownType: 'sectors' },
     { name: 'Nos réalisations', href: '#realisations' },
   ] : [
     { name: 'Notre expertise', href: '/#expertise' },
-    { name: 'Services', href: '/#services', hasDropdown: true },
+    { name: 'Services', href: '/#services', hasDropdown: true, dropdownType: 'services' },
+    { name: 'Secteurs', href: '/secteur', hasDropdown: true, dropdownType: 'sectors' },
     { name: 'Nos réalisations', href: '/#realisations' },
   ];
+
+  // Handle mounting to avoid hydration mismatch
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -120,8 +141,19 @@ export default function Navigation() {
                       {link.hasDropdown ? (
                         <div
                           className="relative"
-                          onMouseEnter={() => setShowServicesDropdown(true)}
-                          onMouseLeave={() => setShowServicesDropdown(false)}
+                          onMouseEnter={() => {
+                            if (link.dropdownType === 'services') {
+                              setShowServicesDropdown(true);
+                              setShowSectorsDropdown(false);
+                            } else if (link.dropdownType === 'sectors') {
+                              setShowSectorsDropdown(true);
+                              setShowServicesDropdown(false);
+                            }
+                          }}
+                          onMouseLeave={() => {
+                            setShowServicesDropdown(false);
+                            setShowSectorsDropdown(false);
+                          }}
                         >
                           <NavigationMenuLink
                             href={link.href}
@@ -133,13 +165,18 @@ export default function Navigation() {
                               className="flex items-center space-x-1"
                             >
                               <span>{link.name}</span>
-                              <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${showServicesDropdown ? 'rotate-180' : ''}`} />
+                              <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${
+                                isMounted && (
+                                  (link.dropdownType === 'services' && showServicesDropdown) || 
+                                  (link.dropdownType === 'sectors' && showSectorsDropdown)
+                                ) ? 'rotate-180' : ''
+                              }`} />
                             </motion.span>
                           </NavigationMenuLink>
                           
-                          {/* Dropdown Menu */}
+                          {/* Services Dropdown Menu */}
                           <AnimatePresence>
-                            {showServicesDropdown && (
+                            {isMounted && link.dropdownType === 'services' && showServicesDropdown && (
                               <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -159,6 +196,35 @@ export default function Navigation() {
                                       transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
                                     >
                                       {service.name}
+                                    </motion.div>
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+
+                          {/* Sectors Dropdown Menu */}
+                          <AnimatePresence>
+                            {isMounted && link.dropdownType === 'sectors' && showSectorsDropdown && (
+                              <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.2 }}
+                                className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                              >
+                                {sectorsLinks.map((sector, sectorIndex) => (
+                                  <Link
+                                    key={sector.name}
+                                    href={sector.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-500 transition-colors duration-200"
+                                  >
+                                    <motion.div
+                                      initial={{ opacity: 0, x: -10 }}
+                                      animate={{ opacity: 1, x: 0 }}
+                                      transition={{ duration: 0.2, delay: sectorIndex * 0.05 }}
+                                    >
+                                      {sector.name}
                                     </motion.div>
                                   </Link>
                                 ))}
@@ -322,9 +388,9 @@ export default function Navigation() {
                         >
                           {link.name}
                         </motion.a>
-                        {/* Services submenu mobile */}
+                        {/* Submenu mobile */}
                         <div className="ml-4 mt-3 space-y-3">
-                          {servicesLinks.map((service, serviceIndex) => (
+                          {link.dropdownType === 'services' && servicesLinks.map((service, serviceIndex) => (
                             <motion.div
                               key={service.name}
                               initial={{ opacity: 0, x: 30 }}
@@ -342,6 +408,27 @@ export default function Navigation() {
                                 onClick={() => setIsOpen(false)}
                               >
                                 {service.name}
+                              </Link>
+                            </motion.div>
+                          ))}
+                          {link.dropdownType === 'sectors' && sectorsLinks.map((sector, sectorIndex) => (
+                            <motion.div
+                              key={sector.name}
+                              initial={{ opacity: 0, x: 30 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ 
+                                delay: 0.2 + index * 0.1 + sectorIndex * 0.05,
+                                type: "spring",
+                                damping: 25,
+                                stiffness: 300
+                              }}
+                            >
+                              <Link
+                                href={sector.href}
+                                className="block text-lg text-gray-600 hover:text-orange-500 transition-colors"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {sector.name}
                               </Link>
                             </motion.div>
                           ))}

@@ -23,6 +23,32 @@ export default function Footer() {
     { name: 'Peinture et Ravalement', href: '/services/peinture-ravalement' },
     { name: 'Électricité et Plomberie', href: '/services/electricite-plomberie' },
     { name: 'Rénovation globale', href: '/services/renovation-globale' },
+    { name: 'Cloisons sèches', href: '/services/cloisons-seches' },
+    { name: 'Finitions plâtrerie', href: '/services/finitions-platrerie' },
+  ];
+
+  const sectorsLinks = [
+    { name: 'Paris 20ᵉ', href: '/secteur', subLinks: [
+      { name: 'Rénovation Paris 20ᵉ', href: '/secteur/renovation-paris-20e' },
+      { name: 'Peinture Paris 20ᵉ', href: '/secteur/peinture-paris-20e' },
+      { name: 'Parquet Paris 20ᵉ', href: '/secteur/pose-parquet-paris-20e' },
+    ]},
+    { name: 'Montreuil', href: '/secteur', subLinks: [
+      { name: 'Rénovation Montreuil', href: '/secteur/renovation-montreuil' },
+      { name: 'Peinture Montreuil', href: '/secteur/peinture-montreuil' },
+      { name: 'Parquet Montreuil', href: '/secteur/pose-parquet-montreuil' },
+    ]},
+    { name: 'Vincennes', href: '/secteur', subLinks: [
+      { name: 'Rénovation Vincennes', href: '/secteur/renovation-vincennes' },
+      { name: 'Peinture Vincennes', href: '/secteur/peinture-vincennes' },
+      { name: 'Parquet Vincennes', href: '/secteur/pose-parquet-vincennes' },
+    ]},
+    { name: 'Bagnolet', href: '/secteur', subLinks: [
+      { name: 'Rénovation Bagnolet', href: '/secteur/renovation-bagnolet' },
+      { name: 'Peinture Bagnolet', href: '/secteur/peinture-bagnolet' },
+      { name: 'Parquet Bagnolet', href: '/secteur/pose-parquet-bagnolet' },
+    ]},
+    { name: 'Voir tous nos secteurs', href: '/secteur' },
   ];
 
   return (
@@ -30,7 +56,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Logo and description */}
             <motion.div 
               className="space-y-4"
@@ -110,6 +136,47 @@ export default function Footer() {
                     >
                       {service.name}
                     </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Secteurs links */}
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg font-semibold">Nos Secteurs</h3>
+              <ul className="space-y-2">
+                {sectorsLinks.map((sector) => (
+                  <li key={sector.name}>
+                    {sector.subLinks ? (
+                      <div className="space-y-1">
+                        <span className="text-slate-300 text-sm font-medium">{sector.name}</span>
+                        <ul className="ml-2 space-y-1">
+                          {sector.subLinks.map((subLink) => (
+                            <li key={subLink.name}>
+                              <a
+                                href={subLink.href}
+                                className="text-slate-400 hover:text-white text-xs transition-colors duration-200 hover:underline block"
+                              >
+                                {subLink.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : (
+                      <a
+                        href={sector.href}
+                        className="text-slate-300 hover:text-white text-sm transition-colors duration-200 hover:underline font-medium"
+                      >
+                        {sector.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

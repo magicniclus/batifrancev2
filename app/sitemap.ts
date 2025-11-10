@@ -5,7 +5,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = seoConfig.siteUrl;
   const currentDate = new Date().toISOString();
 
-  return [
+  // Secteurs géographiques
+  const sectors = [
+    'paris-20e', 'montreuil', 'vincennes', 'bagnolet', 'saint-mande',
+    'fontenay-sous-bois', 'pantin', 'les-lilas', 'nogent-sur-marne', 'rosny-sous-bois'
+  ];
+
+  // Services spécialisés
+  const services = ['renovation', 'peinture', 'pose-parquet'];
+
+  const sitemapEntries: MetadataRoute.Sitemap = [
     // Page d'accueil
     {
       url: baseUrl,
@@ -20,30 +29,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // Pages services
+    // Page secteurs principale
     {
-      url: `${baseUrl}/services/renovation-interieure`,
+      url: `${baseUrl}/secteur`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // Pages services existantes
+    {
+      url: `${baseUrl}/services/peinture-ravalement`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/plomberie`,
+      url: `${baseUrl}/services/renovation-globale`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/salle-de-bain`,
+      url: `${baseUrl}/services/cloisons-seches`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/carrelage`,
+      url: `${baseUrl}/services/doublages`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/electricite-plomberie`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/faux-plafonds`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/finitions-platrerie`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     // Pages légales
     {
@@ -58,24 +92,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-    // Sections de la page d'accueil
     {
-      url: `${baseUrl}/#services`,
+      url: `${baseUrl}/merci`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#expertise`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#realisations`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.7,
+      changeFrequency: 'yearly',
+      priority: 0.2,
     },
   ];
+
+  // Ajouter toutes les pages secteurs spécialisées
+  sectors.forEach(sector => {
+    services.forEach(service => {
+      sitemapEntries.push({
+        url: `${baseUrl}/secteur/${service}-${sector}`,
+        lastModified: currentDate,
+        changeFrequency: 'monthly',
+        priority: 0.85, // Priorité élevée pour les pages géolocalisées
+      });
+    });
+  });
+
+  return sitemapEntries;
 }
